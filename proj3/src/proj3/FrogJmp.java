@@ -6,8 +6,8 @@ public class FrogJmp
 	public static void main(String[] args){
 		
 		FrogJmp fj = new FrogJmp();
-		int skok = fj.solution (new int  10, 85,30);
-		System.out.println("skoczy " + skok + "razy");
+		int skok = fj.solution (new int 10 ,85, 30);
+		System.out.println("skoczy" + skok + "razy");
 		
 		
 		}
@@ -25,7 +25,7 @@ public class FrogJmp
 		    	
 		    	
 		    	return jump;
-		    	}
+		    	
 		
 		
 		
@@ -35,4 +35,5 @@ public class FrogJmp
 		    	return 0;	
 			}
 
+}
 }
