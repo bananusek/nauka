@@ -14,24 +14,28 @@ class TapeEquilibrium {
     		int L;
     		int P;
     		int suma;
-    		
+    		int roznica;
+    		int poprzednia;
+ 
     		for (int i = 0; i < A.length; i++) {
         		
     		suma = suma + A[i];
     		}
-   
-        	while (i < A.length+1) {
-        		
+    		
+    		roznica=0;
+    		int i;		
+        	while  (i < A.length+1) {
+        		roznica=poprzednia;
         		L=L+A[i];
-        		P=suma-L;	
-        				
+        		P=suma-L;
+        		roznica=P=L;
+        		if(roznica<poprzednia){
+        			poprzednia=roznica;
+        			return roznica;
         		}
-        	return 0;
+
     		
-    		
-    		
-    		
-    		
+    		return 0;
     		
     		
     	}
