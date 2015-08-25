@@ -13,31 +13,38 @@ public class FrogRiverOne {
 		
 	}	
 		
-		 public int solution(int X, int A[], int N){
-			 int sek;
-			 int n;
-			 n=A.length;
-			 int[] leaves= new int [n];
+    public int solution(int X, int A[], int N){
+			 int [] leaves = new int [N];
+			 int [] skoki = new int [X];
 			 
-			 for (int i = 0; i < n; i++) {
-				 
-				 if(leaves[i]>=miejsce){
-					
-					 sek=i;
-				 
-				 }
-				 
-				 
+			 
+			 
+			 
+			 for (int j = 0; j < X+1; j++) {
+				 skoki[j]=0;
+			 } 
+		    
+			 
+			 
+			 
+			 
+			 for (int i = 0; i < N; i++) {
+				 int j = leaves[i];
+				 skoki[j]=1;
+			 }
+			 
+			 
+			 
+			if(skoki[j]==1){
+				for (int j = 0; j < X+1; j++) {
+    		
+			     return j;
+		        } 
 				
-			}
 			
-			
-			
-			
-		return sek;	
+			 }
+		
+		return X;	 
 		}
-		
-		
-	
-
 }
+	
