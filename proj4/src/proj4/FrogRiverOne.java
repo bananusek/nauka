@@ -31,18 +31,18 @@ public class FrogRiverOne {
 			 for (int i = 0; i < N; i++) {
 				 int j = leaves[i];
 				 skoki[j]=1;
+				 
+				 if (skoki[j]==1){
+					 
+					 return j;
+				 }
+				 
 			 }
 			 
 			 
-			 
-			if(skoki[j]==1){
-				for (int j = 0; j < X+1; j++) {
-    		
-			     return j;
-		        } 
-				
 			
-			 }
+			
+			 
 		
 		return X;	 
 		}
