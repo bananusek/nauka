@@ -34,7 +34,7 @@ public class FrogRiverOne {
 				 
 				 if (skoki[j]==1){
 					 
-					 return j;
+					 break;
 				 }
 				 
 			 }
@@ -44,7 +44,7 @@ public class FrogRiverOne {
 			
 			 
 		
-		return X;	 
+		return j;	 
 		}
 }
 	
