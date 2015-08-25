@@ -1,3 +1,5 @@
+package proj2;
+
 
 
 class TapeEquilibrium {
@@ -10,7 +12,7 @@ class TapeEquilibrium {
     }
     	
 
-    	class Solution {
+    
     	    public int solution(int[] A) {
     	        // write your code in Java SE 8
     	        int L =0;
@@ -42,4 +44,4 @@ class TapeEquilibrium {
     	    	
     	    }
     	}
-}
+
