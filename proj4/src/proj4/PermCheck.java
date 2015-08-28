@@ -7,19 +7,19 @@ public class PermCheck {
 	public static void main(String[] args) {
 	
 		PermCheck pme = new PermCheck();
-		int perm = pme.solution(new int[]{4,3,1,2});
+		int perm = pme.solution(new int[]{4,1,3});
 		System.out.println("czy jest? " + perm);
 	
 	
 	
 	}
-	int solution(int A[], int N) {
+	int solution(int A[]) {
 	    
-	    int b;
+	    
 	    
 	    java.util.Arrays.sort(A);
 	    
-	    for( int i=0; i< A.length ; i++){
+	    for( int i=0; i< A.length -1 ; i++){
 	        
 	        
 	        if (A[i+1]== A[i] +1){
@@ -31,7 +31,7 @@ public class PermCheck {
 	        
 	        
 	    } 
-	    return 1;   
+	    return 1;  
 	} 
 	
 }
