@@ -12,10 +12,8 @@ public class FrogRiverOne {
 	}
 
 	public int solution(int X, int A[]){ ////czemu to teraz jest na czerwowo??? przecie¿ X to 5
-			 
-			 int [] skoki = new int [X];
-			 int [] leaves = new int [A.length];
-			 
+			
+			 int [] skoki = new int [X];			 
 			 
 			 
 			 for (int j = 0; j < X; j++) {
@@ -32,16 +30,21 @@ public class FrogRiverOne {
 			 
 			 for (int i = 0; i < A.length; i++) {
 				 
-				 int j = leaves[i];/// leaves[1]=3    j=3
+				 int j = A[i];/// leaves[1]=3    j=3
 				
 				 skoki[j]=1;  //skoki[3]=1
 				 
-				 for (j = 0; j < A.length; j++) {
+				
+				 
+				 
+				 
+				 
+				 for (j = 0; j < X; j++) {
 					 
 						
-						if (skoki[j]==1){  // 
+						if (skoki[j]!=1){  // 
 							 
-							 return 1;
+							 return 0;
 						 
 						
 						 }
