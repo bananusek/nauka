@@ -17,31 +17,21 @@ public class PermCheck {
 	    
 	    int b;
 	    
-	   for (int i=0; i< N ; i++) {
+	    java.util.Arrays.sort(A);
 	    
-	        if (A[i]>A[i+1]) {
-	        b=A[i];
-	        A[i]=A[i+1];
-	        A[i+1]=b;
-	            
-	        }
-	    }
-	    
-	    for( int i=0; i< N ; i++){
+	    for( int i=0; i< A.length ; i++){
 	        
 	        
 	        if (A[i+1]== A[i] +1){
 	        
-	        return 1;
+	        
 	        }
 	        
 	        
-	        else{
 	        
-	        return 0; 
-	        }
 	        
-	    }     
+	    } 
+	    return 1;   
 	} 
 	
 }
