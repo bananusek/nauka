@@ -19,6 +19,9 @@ public class PermCheck {
 	    
 	    java.util.Arrays.sort(A);
 	    
+	    
+	    
+	    
 	    for( int i=0; i< A.length -1 ; i++){
 	        
 	        
@@ -29,9 +32,12 @@ public class PermCheck {
 	        
 	        
 	        
-	        
+	        return 1;     
 	    } 
-	    return 1;  
+	     return 0;
+	    
+	    
+	    
 	} 
 	
 }
