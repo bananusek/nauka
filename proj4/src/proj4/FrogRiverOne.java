@@ -13,7 +13,7 @@ public class FrogRiverOne {
 		
 	}	
 		
-    public int solution(int X, int A[], int N){
+    public int solution(int X, int A[]){
 			 int [] leaves = new int [N];
 			 int [] skoki = new int [X];
 			 
@@ -23,25 +23,30 @@ public class FrogRiverOne {
 			 for (int j = 0; j < X+1; j++) {
 				 skoki[j]=0;
 			 } 
-		    
+		    ////// wszedzie 0000000
 			 
 			 
 			 
 			 
-			 for (int i = 0; i < N; i++) {
-				 int j = leaves[i];
-				 skoki[j]=1;
+			 for (int i = 0; i < A.length; i++) {
+				 int j = leaves[i];  /// leaves[1]=3    j=3
+				 skoki[j]=1;  //skoki[3]=1
 				 
-				 if (skoki[j]==1){
-					 
-					 break;
+				 
 				 }
 				 
+			 
+			 
+			 
+			 for (int i = 0; i < A.length; i++) {
+				 
+		
+			 if (skoki[j]==1){  // 
+				 
+				 return 1;
+			 
+			
 			 }
-			 
-			 
-			
-			
 			 
 		
 		return j;	 
