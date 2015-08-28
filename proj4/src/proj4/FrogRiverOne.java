@@ -5,9 +5,9 @@ public class FrogRiverOne {
 	public static void main(String[] args) {
 
 		FrogRiverOne fr = new FrogRiverOne();
-		int tab = fr.solution(new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
-		int miejsce = fr.solution(5);
-		System.out.println("sekunda-->" + miejsce);
+		int tab = fr.solution(4, new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
+
+		System.out.println("sekunda-->" + j);
 
 	}
 
@@ -25,16 +25,18 @@ public class FrogRiverOne {
 			 
 			 
 			 
-			 int i;
 			 
-			 int j = leaves[i];  /// leaves[1]=3    j=3
+			   /// leaves[1]=3    j=3
 			 
 			 
 			 
 			 for (int i = 0; i < A.length; i++) {
+				 
+				 int j = leaves[i];/// leaves[1]=3    j=3
+				
 				 skoki[j]=1;  //skoki[3]=1
 				 
-				 for (int j = 0; j < A.length+; j++) {
+				 for (j = 0; j < A.length; j++) {
 					 
 						
 						if (skoki[j]==1){  // 
