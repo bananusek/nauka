@@ -5,16 +5,16 @@ public class FrogRiverOne {
 	public static void main(String[] args) {
 
 		FrogRiverOne fr = new FrogRiverOne();
-		int tab = fr.solution(4, new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
+		int tab = fr.solution(5, new int[] { 1, 3, 1, 4, 2, 3, 5, 4 });
 
-		System.out.println("sekunda-->" + j);
+		System.out.println("sekunda-->" + tab);
 
 	}
 
-	public int solution(int X, int A[]){
-			 int [] leaves = new int [N];
-			 int [] skoki = new int [X];
+	public int solution(int X, int A[]){ ////czemu to teraz jest na czerwowo??? przecie¿ X to 5
 			 
+			 int [] skoki = new int [X];
+			 int [] leaves = new int [A.length];
 			 
 			 
 			 
