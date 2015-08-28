@@ -38,10 +38,10 @@ public class FrogRiverOne {
 			 
 			 
 			 
-			 for (int i = 0; i < A.length; i++) {
+			 for (int j = 0; j < A.length; j++) {
 				 
 		
-			 if (skoki[j]==1){  // 
+			if (skoki[j]==1){  // 
 				 
 				 return 1;
 			 
@@ -52,4 +52,6 @@ public class FrogRiverOne {
 		return j;	 
 		}
 }
+}
+
 	
