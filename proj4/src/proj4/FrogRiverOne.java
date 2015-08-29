@@ -11,52 +11,36 @@ public class FrogRiverOne {
 
 	}
 
-	public int solution(int X, int A[]){ ////czemu to teraz jest na czerwowo??? przecie¿ X to 5
-			
-			 int [] skoki = new int [X];			 
-			 
-			 
-			 for (int j = 0; j < X; j++) {
-				 skoki[j]=0;
-			 } 
-		    ////// wszedzie 0000000
-			 
-			 
-			 
-			 
-			   /// leaves[1]=3    j=3
-			 
-			 
-			 
-			 for (int i = 0; i < A.length; i++) {
-				 
-				 int j = A[i];/// leaves[1]=3    j=3
-				
-				 skoki[j]=1;  //skoki[3]=1
-				 
-				
-				 
-				 
-				 
-				 
-				 for (j = 0; j < X; j++) {
-					 
-						
-						if (skoki[j]!=1){  // 
-							 
-							 return 0;
-						 
-						
-						 }
-				 }
-				 
-			 
-			 
-			 
-			
-			 
-		
-		return j;	 
+	public int solution(int X, int A[]) {
+		int[] skoki = new int[X];
+
+		for (int j = 0; j < X; j++) {
+			skoki[j] = 0;
+
 		}
-}
+		////// wszedzie 0000000
+
+		for (int i = 0; i < A.length; i++) {
+
+			int j = A[i];/// leaves[1]=3 j=3
+
+			skoki[j] = 1; // skoki[3]=1
+
+			boolean wszystkieRozneOdZera = true;
+
+			for (j = 0; j < X; j++) {
+
+				if (skoki[j] != 1) { //
+					wszystkieRozneOdZera = false;
+
+				}
+			}
+
+			if (wszystkieRozneOdZera == true) {
+				return j;
+			}
+
+		}
+		return -1;
+	}
 }
