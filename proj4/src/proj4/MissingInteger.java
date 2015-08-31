@@ -19,7 +19,8 @@ public class MissingInteger {
 	
 	int solution(int[] A) {
 	    java.util.Arrays.sort(A);  // {1,1,2,3,4,6}
-	 
+	    	
+	    int brakujaca=0;	
 			for (int i = 0; i < A.length - 1;) { // 2==1+1 to i=3, 3==2+1 to i=4, 4==3+1 to i==5,
 			
 	        
@@ -27,23 +28,23 @@ public class MissingInteger {
 
 	             i++;
 
-	                } else if (A[i + 1] == A[i]) { //1==1  to i=2,
+	                } else if (A[i + 1] == A[i]) { // 1. 1==1  to i=2,
 	    
 	                     i++;
 	                } else {    //6!==4+1  wtedy
 	                	
-	                	int brakujaca=A[i-1]+1; // 4+1=5
+	                	 brakujaca=A[i]; // 4+1=5
 	                	
-	                	return brakujaca; //5
+	                	break; //5
 	                }
 	        
 	        
 	        
 	        
-			return 0;
+			
 
 		}
-			return 0; /// wychodzi 0
+			return brakujaca; /// wychodzi 4 a nie pieæ
 
 }
 }
