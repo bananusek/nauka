@@ -5,39 +5,48 @@ public class MissingInteger {
 	public static void main(String[] args) {
 
 		MissingInteger pme = new MissingInteger();
-		int perm = pme.solution(new int[] { -5,-4,-3 });
+		int perm = pme.solution(new int[] {-5,-4,-3,-2});
 		System.out.println(perm);
 
 	}
 
-	int solution(int[] A) {
-		java.util.Arrays.sort(A);
 
-		int brakujaca = 0;
-		for (int i = 0; i < A.length - 1;) {
-			System.out.println(A[i]);
-			if (A[i + 1] == A[i] + 1) {
+	    public int solution(int[] A) {
+	      java.util.Arrays.sort(A);
+	
+			int brakujaca = 0;
+			for (int i = 0; i < A.length - 1;) {
+			
+				if (A[i + 1] == A[i] + 1) {
+					
+					i++;
 
-				i++;
+				} else if (A[i + 1] == A[i]) {
+					
+					i++;
+				} else {
 
-			} else if (A[i + 1] == A[i]) {
+					brakujaca = A[i] + 1;
+				
+					
 
-				i++;
-			} else {
-
-				brakujaca = A[i] + 1;
-				System.out.println("brakujaca to:");
-				break;
+				}
 
 			}
 
+			if (brakujaca < 0) {
+
+				brakujaca = 1;
+
+			}
+			
+			else if(brakujaca==0){
+			
+				brakujaca=A[A.length-1]+1;
+			}
+			
+			return brakujaca;
 		}
 
-		if (brakujaca  <= 0) {
 
-			brakujaca = 1;
-
-		}
-		return brakujaca;
 	}
-}
