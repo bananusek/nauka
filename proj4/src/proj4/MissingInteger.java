@@ -5,7 +5,7 @@ public class MissingInteger {
 	public static void main(String[] args) {
 
 		MissingInteger pme = new MissingInteger();
-		int perm = pme.solution(new int[] { -5, -3 });
+		int perm = pme.solution(new int[] { -5,-4,-3 });
 		System.out.println(perm);
 
 	}
@@ -27,7 +27,7 @@ public class MissingInteger {
 
 				brakujaca = A[i] + 1;
 				System.out.println("brakujaca to:");
-				return brakujaca;
+				break;
 
 			}
 
