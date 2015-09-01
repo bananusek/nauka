@@ -5,30 +5,31 @@ public class MissingInteger {
 	public static void main(String[] args) {
 
 		MissingInteger pme = new MissingInteger();
-		int perm = pme.solution(new int[] { -1, -3,-6, -4, -1, -2 });
+		int perm = pme.solution(new int[] { 1,2,3,4 });
 		System.out.println("ktora-->" + perm);
 
 	}
 
 	int solution(int[] A) {
-		java.util.Arrays.sort(A); // {1,1,2,3,4,6}
+		java.util.Arrays.sort(A); 
 
 		int brakujaca = 0;
-		for (int i = 0; i < A.length - 1;) { // 2==1+1 to i=3, 3==2+1 to i=4,
-												// 4==3+1 to i==5,
+		for (int i = 0; i < A.length - 1;) { 
 			System.out.println(A[i]);
-			if (A[i + 1] == A[i] + 1) {
+			if (A[i + 1] == A[i] + 1 || A[i + 1] == A[i]) {
 
 				i++;
 
-			} else if (A[i + 1] == A[i]) { // 1. 1==1 to i=2,
-
-				i++;
-			} else { // 6!=4+1 wtedy
-
-				brakujaca = A[i] + 1;
+			} else if (A[i + 1] != A[i] + 1) {
 				
-				break;//; //
+				brakujaca = A[i] + 1;
+
+				break;
+
+			} else { 
+				
+				System.out.println("nie ma brakujacej");
+				break;
 			}
 
 		}
