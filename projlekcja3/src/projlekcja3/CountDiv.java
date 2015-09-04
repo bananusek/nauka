@@ -4,29 +4,25 @@ public class CountDiv {
 
 	public static void main(String[] args) {
 		CountDiv dv = new CountDiv();
-		int div = dv.solution(6, 11, 3);
+		int div = dv.solution(6);
 		System.out.println("w przedziale od A do B  " + div + " jest podzielnych przez K");
 	}
 
-	public int solution(int A, int B, int K) {
+	public int solution(int B) {
 		int ile = 0;
-		int C = B - A;// 11-6=5
-		System.out.println(C);
-		int[] tab = new int[C];
-		System.out.println(tab);
-		for (int i = 0; i <= C; i++) {
-
-			tab[i] = C + 1;
+		int [] tab = new int[B];
+		for(int i=0; i<B ;i++){
+		
+		tab[i]=i+1;                    						/// to powinno nadac od 1,2,3,4,5,6,7,8,9,10,11
 		}
-
-		System.out.println(tab);
-
-		for (int j = 0; j < tab.length; j++) {
-			if (tab[j] % K == 0) {
-				ile = ile + 1;
-			}
-		}
-
+		
+		System.out.println("tablica to"+ tab);
+		
+		
+		
+		
+		
+		
 		return ile;
 
 	}
