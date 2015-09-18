@@ -13,17 +13,25 @@ public class MaxProductOfThree {
 		int max3 = 0;
 		for (int i = 0; i < A.length; i++) {
 			if (A[i] > max) {
-				max = i;
+				max = A[i];
 			}
-			for (int j = 0; A[j] < max; j++) {
+			for (int j = 0; A[j] < A.length; j++) {
 				if (A[j] > max2) {
-					max2 = j;
-
+					if (A[j] == max) {
+						j++;
+					}
+					max2 = A[j];
+					for (int k = 0; A[k] < A.length; k++) {
+						if (A[k] > max3) {
+							if (A[k] == max || A[k] == max2) {
+								k++;
+							}
+							max3 = A[k];
+						}
+					}
 				}
 			}
 		}
-
-		return max2;
+		return max3;
 	}
 }
- 
