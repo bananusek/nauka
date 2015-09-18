@@ -8,14 +8,22 @@ public class MaxProductOfThree {
 	}
 
 	public int solution(int[] A) {
-		java.util.Arrays.sort(A);
+		int max = 0;
+		int max2 = 0;
+		int max3 = 0;
 		for (int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
-		}
-		int a = 0;
-		
-		a=A[A.length]*A[A.length-1]*A[A.length-3];
+			if (A[i] > max) {
+				max = i;
+			}
+			for (int j = 0; A[j] < max; j++) {
+				if (A[j] > max2) {
+					max2 = j;
 
-		return a;
+				}
+			}
+		}
+
+		return max2;
 	}
 }
+ 
