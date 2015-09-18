@@ -3,7 +3,7 @@ package projlekcja4;
 public class MaxProductOfThree {
 	public static void main(String[] args) {
 		MaxProductOfThree mp = new MaxProductOfThree();
-		int lol = mp.solution(new int[] { -3, 1, 2, -2, 5, 6 });
+		int lol = mp.solution(new int[] { -3, 4, 2, -2, 8, 6 });
 		System.out.println(lol);
 	}
 
@@ -21,17 +21,18 @@ public class MaxProductOfThree {
 						j++;
 					}
 					max2 = A[j];
-					for (int k = 0; A[k] < A.length; k++) {
-						if (A[k] > max3) {
-							if (A[k] == max || A[k] == max2) {
-								k++;
-							}
-							max3 = A[k];
+				}
+				for (int k = 0; A[k] < A.length; k++) {
+					if (A[k] > max3) {
+						if (A[k] == max || A[k] == max2) {
+							k++;
 						}
+						max3 = A[k];
 					}
 				}
 			}
 		}
-		return max3;
+
+		return max;
 	}
 }
