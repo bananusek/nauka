@@ -1,27 +1,22 @@
 package sortowania;
-
+import sortowania.losowanie;
 public class InsertionSort {
-	public static void main(String[] args) {
-		InsertionSort bs = new InsertionSort();
-		int lol = bs.solution(new int[] { 5, 5, 8, -4, 4, 9 });
-		System.out.println(lol);
-	}
-
-	public int solution(int[] A) {
-		if (A.length == 0) {
+	
+	public int solution(int[] t) {
+		if (t.length == 0) {
 			return 0;
 		}
-		for (int i = 0; i < A.length; i++) {
-			int a = A[i];
+		for (int i = 0; i < t.length; i++) {
+			int a = t[i];
 			int j = i;
-			while (j > 0 && A[j - 1] > a) {
-				A[j] = A[j - 1];
+			while (j > 0 && t[j - 1] > a) {
+				t[j] = t[j - 1];
 				j = j - 1;
 			}
-			A[j] = a;
+			t[j] = a;
 		}
-		for (int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
+		for (int i = 0; i < t.length; i++) {
+			System.out.println(t[i]);
 		}
 		return 1;
 	}
