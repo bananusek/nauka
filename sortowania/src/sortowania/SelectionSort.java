@@ -1,11 +1,6 @@
 package sortowania;
 
 public class SelectionSort {
-	public static void main(String[] args) {
-		SelectionSort ss = new SelectionSort();
-		int lol = ss.solution(new int[] { 5, 5, 8, -4, 4, 9 });
-		System.out.println(lol);
-	}
 
 	public int solution(int[] A) {
 		for (int i = 0; i < A.length - 1; i++) {
@@ -21,10 +16,6 @@ public class SelectionSort {
 				A[i] = A[minIndex];
 				A[minIndex] = a;
 			}
-
-		}
-		for (int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
 		}
 		return 1;
 	}
