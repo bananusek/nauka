@@ -7,13 +7,18 @@ public class BubbleSort {
 		if (A.length == 0) {
 			return 0;
 		}
-
 		for (int i = 0; i < A.length - 1; i++) {
-
-			if (A[i] > A[i + 1]) {
-				a = A[i + 1];
-				A[i + 1] = A[i];
-				A[i] = a;
+			for (int j = i; j < A.length - 1; j++) {
+				int swap=0;
+				if (A[j] > A[j + 1]) {
+					a = A[j + 1];
+					A[j + 1] = A[j];
+					A[j] = a;
+					swap = 1;
+				}
+				if (swap==0){
+					return 1;
+				}
 			}
 		}
 
