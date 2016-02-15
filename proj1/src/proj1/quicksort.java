@@ -30,7 +30,7 @@ public class quicksort {
 	}
 
 	public void solution(int l, int p, int[] tab) {
-		int piwot = tab[l];
+		int piwot = tab[p];
 		int i = l;
 		int j = p;
 		int temp;
@@ -38,7 +38,7 @@ public class quicksort {
 			while (tab[i] < piwot)
 				i = i + 1;
 			System.out.println("i while="+i);
-			while (piwot < tab[j])
+			while (tab[j] > piwot)
 				j = j - 1;
 			System.out.println("j while="+j);
 			System.out.println("piwot ="+piwot);
